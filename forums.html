@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/1f96c39da6.js" crossorigin="anonymous"></script>
+
+<style>
+    * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 -ms-overflow-style: none;
+	 scrollbar-width: none;
+	 transition: 0.2s;
+}
+ *-webkit-scrollbar {
+	 display: none;
+}
+ body {
+	 width: 100%;
+	 height: 100vh;
+	 overflow: hidden;
+	 font-family: Cabin, sans-serif;
+	 background-color: #94d4bb;
+	 color: #000;
+}
+ main {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -ms-transform: translate(-50%, -50%);
+	 transform: translate(-50%, -50%);
+	 width: 375px;
+	 height: 600px;
+	 display: flex;
+	 flex-flow: column nowrap;
+	 border-radius: 20px;
+	 background-image: linear-gradient(to bottom right, #6fd08c, #7b9ea8, #78586f);
+	 filter: drop-shadow(0px 0px 10px #2b4950);
+}
+ #content {
+	 padding: 1rem;
+	 height: 525px;
+	 overflow: scroll;
+	 display: flex;
+	 flex-direction: column;
+}
+ #content img {
+	 width: 75px;
+	 height: 75px;
+	 object-fit: cover;
+	 border-radius: 50%;
+}
+ #content h3 {
+	 font-weight: 600;
+}
+ #content h6 {
+	 font-weight: 400;
+}
+ #content p {
+	 margin-top: 0.5rem;
+	 text-align: left;
+	 font-size: 0.9em;
+}
+ #content .message-in {
+	 margin-bottom: 1rem;
+	 padding: 1rem;
+	 display: grid;
+	 grid-template-columns: 1fr 4fr;
+	 grid-template-rows: 1fr;
+	 border: 2px solid white;
+	 border-radius: 20px;
+	 background-color: rgba(255, 255, 255, 0.3);
+}
+ #content .message-in img {
+	 grid-column: 1;
+	 grid-row: 1;
+}
+ #content .message-in h3, #content .message-in h6, #content .message-in p {
+	 padding: 0 1rem;
+	 grid-column: 2;
+	 grid-row: 1;
+}
+ #content .message-out {
+	 margin-bottom: 1rem;
+	 padding: 1rem;
+	 display: grid;
+	 grid-template-columns: 4fr 1fr;
+	 grid-template-rows: 1fr;
+	 border: 2px solid white;
+	 border-radius: 20px;
+	 background-color: rgba(255, 255, 255, 0.4);
+}
+ #content .message-out img {
+	 grid-column: 2;
+	 grid-row: 1;
+}
+ #content .message-out h3, #content .message-out h6, #content .message-out p {
+	 grid-column: 1;
+	 grid-row: 1;
+}
+ #action {
+	 flex: 1;
+	 display: flex;
+	 flex-flow: column nowrap;
+}
+ #action h5 {
+	 padding: 0.3rem 0 0rem 1rem;
+	 flex: 1;
+	 border-radius: 10px 10px 0 0;
+	 background-color: #3d6972;
+	 color: rgba(255, 255, 255, 0.8);
+}
+ #action .sending {
+	 display: flex;
+	 flex-flow: row nowrap;
+	 justify-content: center;
+	 align-items: center;
+	 gap: 1;
+	 flex: 2;
+	 border-radius: 0 0 20px 20px;
+	 background-color: #2b4950;
+}
+ #action .sending textarea {
+	 height: 31.4px;
+	 width: 80%;
+	 padding: 0.4rem;
+	 border: none;
+	 border-radius: 5px;
+	 font-family: Cabin, sans-serif;
+	 background-color: #3d6972;
+	 color: rgba(255, 255, 255, 0.8);
+}
+ #action .sending button {
+	 margin-left: 0.5rem;
+	 padding: 0.2rem;
+	 border: none;
+	 border-radius: 5px;
+	 font-size: 1.4rem;
+	 background-color: #3d6972;
+	 color: #6fd08c;
+}
+ .message-in:hover, .message-out:hover {
+	 border: 2px solid #3d6972 !important;
+}
+ button:hover {
+	 color: #a7e8bb !important;
+}
+ button:active {
+	 color: #2b4950 !important;
+}
+ 
+</style>
+</head>
+<body>
+    <main>
+      <section id="content">
+        <div class="message-in">
+          <img src="https://images.unsplash.com/photo-1608874973277-a34ed4aba3f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80">
+          <div class="mi-text">
+            <h3>bashfulfruit</h3>
+            <h6>today, 4:34pm</h6>
+            <p>i'm so tired</p>
+            <p>how's everyone doing?</p>
+          </div>
+        </div>
+        <div class="message-out">
+          <img src="https://images.unsplash.com/photo-1623380466160-9c3a85477ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80">
+          <div class="mo-text">
+            <h3>northamber</h3>
+            <h6>today, 4:40pm</h6>
+            <p>p good. kev & i are gonna be goin grocery shoppin soon. hbu?</p>
+          </div>
+        </div>
+        <div class="message-in">
+          <img src="https://images.unsplash.com/photo-1507808973436-a4ed7b5e87c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80">
+          <div class="mi-text">
+            <h3>SamDeer</h3>
+            <h6>today, 4:41pm</h6>
+            <p>not to get political or anything but what the fuck is broccoli</p>
+            <p>this is a genuine question</p>
+          </div>
+        </div>
+        <div class="message-out">
+          <img src="https://images.unsplash.com/photo-1623380466160-9c3a85477ab6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80">
+          <div class="mo-text">
+            <h3>northamber</h3>
+            <h6>today, 4:42pm</h6>
+            <p>sam-</p>
+          </div>
+        </div>
+        <div class="message-in">
+          <img src="https://images.unsplash.com/photo-1492674253171-7561dea14008?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2044&q=80">
+          <div class="mi-text">
+            <h3>SpitefulGengar</h3>
+            <h6>today, 4:42pm</h6>
+            <p>this sounds more like a cry for help</p>
+          </div>
+        </div>
+        <div class="message-in">
+            <img src="https://images.unsplash.com/photo-1492674253171-7561dea14008?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2044&q=80">
+            <div class="mi-text">
+              <h3>SpitefulGengar</h3>
+              <h6>today, 4:42pm</h6>
+              <p>this sounds more like a cry for help</p>
+            </div>
+          </div>
+          <div class="message-in">
+            <img src="https://images.unsplash.com/photo-1492674253171-7561dea14008?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2044&q=80">
+            <div class="mi-text">
+              <h3>SpitefulGengar</h3>
+              <h6>today, 4:42pm</h6>
+              <p>this sounds more like a cry for help</p>
+            </div>
+          </div>
+          <div class="message-in">
+            <img src="https://images.unsplash.com/photo-1492674253171-7561dea14008?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2044&q=80">
+            <div class="mi-text">
+              <h3>SpitefulGengar</h3>
+              <h6>today, 4:42pm</h6>
+              <p>this sounds more like a cry for help</p>
+            </div>
+          </div>
+      </section>
+  
+      <section id="action">
+        <h5>Several users are typing...</h5>
+        <div class="sending">
+          <textarea cols="30" rows="1" placeholder="Message"></textarea>
+          <button type="button">
+            <i class="fa-solid fa-paper-plane-top"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
